@@ -1,0 +1,21 @@
+# Virtual Environment
+.venv/
+venv/
+
+# PyInstaller / Build
+dist/
+build/
+*.spec
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Python temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/

@@ -1,0 +1,30 @@
+# GUÍA DE OPERACIÓN - PC-Optimizer SME Edition
+
+## Introducción
+Esta herramienta está diseñada para optimizar el rendimiento de Windows 11 de forma segura y controlada.
+
+## Instrucciones de Uso
+
+1. **Activación del Entorno**:
+   Asegúrate de ejecutar la aplicación dentro del entorno virtual:
+   ```powershell
+   .\venv\Scripts\Activate.ps1
+   python src/main.py
+   ```
+
+2. **Modo de Prueba (Dry Run)**:
+   Por defecto, el "Modo de Prueba" está activado. Esto permite simular las acciones sin realizar cambios reales en el sistema. Desactiva el switch solo cuando estés listo para aplicar los cambios.
+
+3. **Módulos Disponibles**:
+   - **Limpieza**: Elimina archivos temporales innecesarios.
+   - **RAM**: Monitorea el consumo de memoria.
+   - **Salud del Sistema**: Ejecuta SFC y DISM para reparar errores de Windows.
+
+4. **Permisos de Administrador**:
+   Para el módulo de "Salud del Sistema", es IMPRESCINDIBLE ejecutar la terminal o el programa con privilegios de Administrador.
+
+## Solución de Problemas Comunes
+
+- **Error al importar bibliotecas**: Ejecuta `pip install -r requirements.txt`.
+- **Fallo en SFC/DISM**: Verifica que tienes permisos de Administrador.
+- **Logs**: Revisa la carpeta `/logs` para ver el detalle de cualquier error.
